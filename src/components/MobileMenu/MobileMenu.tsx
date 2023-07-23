@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./mobilemenu.scss";
 import DensityMediumIcon from "@mui/icons-material/DensityMedium";
 import CloseIcon from "@mui/icons-material/Close";
@@ -10,13 +10,20 @@ import Cart from "../ui/Cart/Cart";
 const MobileMenu = () => {
   const [open, setOpen] = useState(false);
   const [user, setUser] = useState(false);
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflowY = "hidden"
+    }else {
+      document.body.style.overflowY = "scroll"
+    }
+  }, [open]);
   return (
     <div>
       <span onClick={() => setOpen(!open)}>
         {open ? <CloseIcon /> : <DensityMediumIcon />}
       </span>
       {open && (
-        <ul className="absolute flex text-3xl items-center justify-center gap-5 flex-col top-[110px] left-0 bg-orange-600 w-full h-[calc(100vh-110px)]">
+        <ul className="absolute flex text-3xl items-center justify-center gap-5 flex-col top-[150px] md:top-[110px] left-0 bg-orange-600 w-full h-[calc(100vh-140px)] md:h-[calc(100vh-110px)]">
           {links.map((link) => (
             <Link onClick={() => setOpen(false)} href={link.url} key={link.url}>
               <li>{link.title}</li>

@@ -4,7 +4,7 @@ import "./mainfooditem.scss";
 const MainFoodItem = () => {
   return (
     <div className="flex even:bg-slate-500/50 p-20 h-[100vh] bg-white items-center justify-center flex-col text-center flex-1">
-      <div className="relative  h-[500px] w-[90%]">
+      <div className="relative  h-[200px] w-[90%] md:h-[500px] w-[90%]">
         <Image className="object-contain"  fill src={"/pizza.png"} alt="food" />
       </div>
       <h1 className="m-3 text-3xl uppercase font-bold text-red-700">
