@@ -1,4 +1,3 @@
-import "./alert.scss";
 
 const Alert = () => {
   return (

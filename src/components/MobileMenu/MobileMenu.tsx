@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import "./mobilemenu.scss";
 import DensityMediumIcon from "@mui/icons-material/DensityMedium";
 import CloseIcon from "@mui/icons-material/Close";
 import { links } from "../../../data";

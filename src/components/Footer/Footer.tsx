@@ -1,5 +1,4 @@
 import Logo from "../ui/Logo/Logo"
-import "./footer.scss"
 
 const Footer = () => {
   return (
