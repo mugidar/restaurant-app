@@ -23,7 +23,7 @@ const MobileMenu = () => {
         {open ? <CloseIcon /> : <DensityMediumIcon />}
       </span>
       {open && (
-        <ul className="absolute flex text-3xl items-center justify-center gap-5 flex-col top-[150px] md:top-[110px] left-0 bg-orange-600 w-full h-[calc(100vh-140px)] md:h-[calc(100vh-110px)]">
+        <ul className="absolute z-10 flex text-3xl items-center justify-center gap-5 flex-col top-[150px] md:top-[110px] left-0 bg-orange-600 w-full h-[calc(100vh-140px)] md:h-[calc(100vh-110px)]">
           {links.map((link) => (
             <Link onClick={() => setOpen(false)} href={link.url} key={link.url}>
               <li>{link.title}</li>
@@ -38,11 +38,11 @@ const MobileMenu = () => {
               Login
             </Link>
           )}
-          <li>
-            <Cart color="lime" />
+          <li onClick={() => setOpen(false)}>
+            <Cart color="lime"  />
           </li>
           <li>
-            <Phone phone="067131062435" />
+            <Phone phone="0980133832" />
           </li>
         </ul>
       )}

@@ -15,7 +15,7 @@ const Phone: React.FC<PhoneProps> = ({ color, phone = "0980133832" }) => {
   return (
     <div className="flex items-center bg-amber-600 px-2 py-1 rounded-md">
       <LocalPhoneIcon sx={{ color: color }} fontSize="middle" />
-      {formatted}
+      <a href={`tel:+${formatted}`}>{formatted}</a>
     </div>
   );
 };
