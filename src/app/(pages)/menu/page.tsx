@@ -29,8 +29,8 @@ const categories = [
 
 const page = () => {
   return (
-    <div className="categories">
-      <div className="container h-screen w-screen lg:flex items-center">
+    <div className="categories h-full">
+      <div className="container h-full w-screen lg:flex items-center">
         {categories.map((category) => (
           <Link href={category.url} key={category.title}>
             <div
