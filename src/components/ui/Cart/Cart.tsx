@@ -4,13 +4,12 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 interface CartProps {
   color?: string;
-  size?: string;
 }
 
-const Cart: React.FC<CartProps> = ({ color = "white", size = "middle" }) => {
+const Cart: React.FC<CartProps> = ({ color = "white" }) => {
   return (
     <Link href={"/cart"}>
-      <ShoppingCartIcon sx={{color: color}} fontSize={size} />
+      <ShoppingCartIcon sx={{color: color}} fontSize={"medium" } />
       Cart [3]
     </Link>
   );

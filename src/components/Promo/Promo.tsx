@@ -1,4 +1,4 @@
-import CountDown from "../Countdown/CountDown.tsx";
+import CountDown from "../Countdown/CountDown";
 
 
 const Promo = () => {

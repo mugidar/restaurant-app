@@ -27,7 +27,7 @@ const pizza = {
 const Page = () => {
   const [currentOption, setCurrentOption] = useState("Small");
   const [quantity, setQuantity] = useState(1);
-  const [total, setTotal] = useState();
+  const [total, setTotal] = useState<string | number>(pizza.price);
   
   useEffect(() => {
     const option = pizza.options.filter(
