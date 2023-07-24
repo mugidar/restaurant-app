@@ -1,5 +1,6 @@
-
+import CartBtn from "@/components/ui/CartBtn/Button";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const pizzas = [
@@ -137,17 +138,26 @@ const page = () => {
       <h1>Category!</h1>
       <div className="flex flex-wrap">
         {pizzas.map((pizza) => (
-          <div key={pizza.id} className="product_item md:even:bg-slate-500 bg-slate-300  group transition-all duration-200 border-b-2 border-r-2 h-[500px] w-full sm:w-1/2 md:w-1/3 lg:w-1/4  flex flex-col justify-between   ">
-        
-            <div className="relative w-full h-[400px]">
-              <Image className="object-contain" alt="" src={pizza.img} fill />
-            </div>
+          <div className="product_item relative md:even:bg-slate-500 bg-slate-300 
+          group transition-all duration-200 border-b-2 border-r-2 h-[500px] w-full 
+          sm:w-1/2 md:w-1/3 lg:w-1/4  flex flex-col justify-between  "  key={pizza.id}>
+            <Link 
+             href={`/product/${pizza.id}`}>
+                <div className="relative w-full h-[400px]">
+                  <Image
+                    className="object-contain"
+                    alt=""
+                    src={pizza.img}
+                    fill
+                  />
+                </div>
 
-            <div className="flex p-4 justify-between items-center text-3xl font-bold capitalize">
-              <span>{pizza.title}</span>
-              <span>${pizza.price}</span>
-            </div>
-            <button className="hidden group-hover:block transition-all  bg-red-500 text-white p-2 rounded-lg">Add to Cart</button>
+                <div className="flex p-4 justify-between items-center text-3xl font-bold capitalize">
+                  <span>{pizza.title}</span>
+                  <span>${pizza.price}</span>
+                </div>
+            </Link>
+            <CartBtn type="cart" className="hidden group-hover:block absolute bottom-0 left-0 w-full"  />
           </div>
         ))}
       </div>

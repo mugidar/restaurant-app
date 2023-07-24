@@ -1,4 +1,5 @@
 import CountDown from "../Countdown/CountDown";
+import CartBtn from "../ui/CartBtn/Button";
 
 
 const Promo = () => {
@@ -15,9 +16,7 @@ const Promo = () => {
       <div className="mt-4 text-2xl md:text-6xl font-bold text-yellow-500 timer">
        <CountDown endDate="2023-07-25"/>
       </div>
-      <button className="mt-5 bg-red-500 px-3 py-2 rounded-lg">
-        Order Now
-      </button>
+      <CartBtn type="order"/>
     </div>
   );
 };

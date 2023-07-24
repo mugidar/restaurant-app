@@ -1,5 +1,6 @@
 import Image from "next/image";
 import "./MainFoodItem.scss";
+import CartBtn from "../ui/CartBtn/Button";
 
 interface MainfoodItem {
   title: string;
@@ -17,9 +18,7 @@ const MainFoodItem: React.FC<MainfoodItem>= ({ title, price, imgSrc, description
       <h1 className="m-3 text-3xl uppercase font-bold text-red-700">{title}</h1>
       <p className="text-red-400 w-[300px]">{description}</p>
       <strong className="mt-4 text-red-500">${price}</strong>
-      <button className="mt-2 bg-red-600 px-3 py-2 rounded-lg">
-        Add to Cart
-      </button>
+      <CartBtn type="cart" className="px-5"/>
     </div>
   );
 };

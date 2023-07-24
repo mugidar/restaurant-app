@@ -1,9 +1,8 @@
 
 import Hero from "@/components/Hero/Hero";
-import MainFoodItem from "@/components/MainFoodItem/MainFoodItem";
 import Promo from "@/components/Promo/Promo";
 import Recommendations from "@/components/Recommendations/Recommendations";
-import Image from "next/image";
+import CartBtn from "@/components/ui/CartBtn/Button";
 
 export default function Home() {
 
@@ -12,7 +11,6 @@ export default function Home() {
      <Hero/>
      <Recommendations/>
      <Promo/>
-    
     </>
   );
 }

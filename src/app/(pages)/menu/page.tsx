@@ -38,16 +38,13 @@ const page = () => {
                 backgroundImage: `url(${category.imgSrc})`,
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "240px 100px",
-                backgroundSize: "contain"
+                backgroundSize: "contain",
+                backgroundColor: `${category.color}`
               }}
               className={`categoryItem p-5 text-black 
 
             h-1/3
-            ${
-              category.color === "white"
-                ? "bg-white"
-                : "bg-" + category.color + "-600"
-            }`}
+            `}
             >
               <h1 className="font-bold text-3xl uppercase">{category.title}</h1>
               <p className="text-lg font-light mt-5">{category.description}</p>
