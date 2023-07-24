@@ -18,11 +18,10 @@ const page = () => {
           ></div>
 
           <div className="
-          pt-20
           flex flex-col flex-1 items-center justify-center text-center  h-full
           p-5
           text-black bg-slate-200
-          lg:items-start lg:text-start  lg:justify-start
+          lg:items-start lg:text-start  lg:justify-start lg:h-[60vh]
           ">
             <h1 className="text-4xl font-bold">Welcome</h1>
             <p className="mt-5">
