@@ -17,7 +17,12 @@ const page = () => {
             }}
           ></div>
 
-          <div className="flex items-center text-center lg:items-start lg:text-start flex-col pl-16 pt-16 pr-5  flex-1 h-[60vh] text-black bg-slate-200">
+          <div className="
+          flex flex-col flex-1 items-center justify-center text-center  h-full
+          p-5
+          text-black bg-slate-200
+          lg:items-start lg:text-start  lg:justify-start
+          ">
             <h1 className="text-4xl font-bold">Welcome</h1>
             <p className="mt-5">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, ab?

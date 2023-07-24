@@ -11,9 +11,9 @@ const MobileMenu = () => {
   const [user, setUser] = useState(false);
   useEffect(() => {
     if (open) {
-      document.body.style.overflowY = "hidden"
-    }else {
-      document.body.style.overflowY = "scroll"
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "scroll";
     }
   }, [open]);
   return (
@@ -37,8 +37,13 @@ const MobileMenu = () => {
               Login
             </Link>
           )}
+          <li>
+            <Link href={"/orders"} onClick={() => setOpen(!open)}>
+              orders
+            </Link>
+          </li>
           <li onClick={() => setOpen(false)}>
-            <Cart color="lime"  />
+            <Cart color="lime" />
           </li>
           <li>
             <Phone phone="0980133832" />
