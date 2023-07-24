@@ -1,5 +1,4 @@
 import { twMerge } from "tailwind-merge";
-import "./logo.scss";
 import Link from "next/link";
 
 interface LogoProps {
