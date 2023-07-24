@@ -28,7 +28,7 @@ const CartBtn: React.FC<CartBtnProps> = ({
             "mt-5 bg-orange-400 text-white px-3 py-2 rounded-lg",
             className
           )}
-          onClick={() => onClick()}
+          onClick={onClick}
         >
           Order now
         </button>
@@ -38,7 +38,7 @@ const CartBtn: React.FC<CartBtnProps> = ({
 
   return (
     <button
-    onClick={() => onClick()}
+    onClick={onClick}
       className={twMerge(
         "mt-5  bg-red-500 text-white p-2 rounded-lg",
         className
