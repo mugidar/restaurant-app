@@ -1,5 +1,5 @@
 import Slider from "../Slider/Slider";
-import "./hero.scss";
+
 
 const Hero = () => {
   return (

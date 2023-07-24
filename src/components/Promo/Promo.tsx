@@ -1,6 +1,5 @@
+import CountDown from "../Countdown/CountDown.tsx";
 
-import Countdown from "../Countdown/Countdown";
-import "./promo.scss";
 
 const Promo = () => {
 
@@ -14,7 +13,7 @@ const Promo = () => {
         autem porro harum totam debitis.
       </p>
       <div className="mt-4 text-2xl md:text-6xl font-bold text-yellow-500 timer">
-       <Countdown endDate="2023-07-25"/>
+       <CountDown endDate="2023-07-25"/>
       </div>
       <button className="mt-5 bg-red-500 px-3 py-2 rounded-lg">
         Order Now

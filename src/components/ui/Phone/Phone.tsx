@@ -1,4 +1,3 @@
-import "./phone.scss";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 
 interface PhoneProps {
