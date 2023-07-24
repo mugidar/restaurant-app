@@ -28,21 +28,23 @@ const Page = () => {
   const [currentOption, setCurrentOption] = useState("Small");
   const [quantity, setQuantity] = useState(1);
   const [total, setTotal] = useState<string | number>(pizza.price);
-  
+
   useEffect(() => {
     const option = pizza.options.filter(
       (option) => option.title === currentOption
     );
-    const additionalPrice = option[0].additionalPrice 
-    const pizzaPrice = pizza.price
+    const additionalPrice = option[0].additionalPrice;
+    const pizzaPrice = pizza.price;
 
     setTotal((additionalPrice + pizzaPrice * quantity).toFixed(2));
   }, [quantity, currentOption]);
 
   return (
-    <div className="h-[100vh] p-20 md:flex  md:items-center ">
-      <div className="relative md:w-[50vw] h-1/2  md:h-[70%]">
-        <Image className="object-contain" fill alt="" src={pizza.img} />
+    <div className="p-5 md:p-20  lg:flex  md:items-center ">
+      <div className="w-full flex justify-center mb-8">
+        <div className="relative flex self-center w-1/2 min-w-[100px] h-[200px] md:h-[400px]">
+          <Image className=" object-contain" fill alt="" src={pizza.img} />
+        </div>
       </div>
       <div className="md:flex items-center flex-col">
         <h1 className="text-red-400 uppercase font-bold text-3xl">
@@ -50,7 +52,7 @@ const Page = () => {
         </h1>
         <p className="mt-4 text-red-200 mb-5 md:w-[600px]">{pizza.desc}</p>
         <strong className="text-red-400 md:text-4xl">${total}</strong>
-        <div className="mt-4 flex justify-between md:gap-x-5">
+        <div className="mt-4 flex flex-col sm:flex-row justify-between md:gap-x-5">
           {pizza.options.map((option) => (
             <span
               onClick={() => setCurrentOption(option.title)}
@@ -72,7 +74,7 @@ const Page = () => {
               <span
                 className="cursor-pointer"
                 onClick={() =>
-                  setQuantity((prev) => (prev <= 1 ? prev : prev-1 ))
+                  setQuantity((prev) => (prev <= 1 ? prev : prev - 1))
                 }
               >
                 {"< "}
@@ -80,9 +82,7 @@ const Page = () => {
               <span>{quantity}</span>
               <span
                 className="cursor-pointer"
-                onClick={() =>
-                  setQuantity((prev) => prev+1)
-                }
+                onClick={() => setQuantity((prev) => prev + 1)}
               >
                 {" >"}
               </span>
