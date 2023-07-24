@@ -16,87 +16,8 @@ const page = () => {
             </div>
             <strong>$24.90</strong>
           </div>
-          <span>X</span>
+          <span className="cursor-pointer">X</span>
         </div>
-        <div className="cart_item  w-full flex  justify-between lg:justify-center gap-x-[100px] items-start md:items-center p-5 ">
-          <div className="flex items-center gap-x-7">
-            <div className="relative w-[100px] h-[100px] bg-red-500/20 rounded-md">
-              <Image fill src={"/p1.png"} alt="" />
-            </div>
-            <div className="flex flex-col items-start">
-              <span>SICILIAN PIZZA</span>
-              <span>Large</span>
-            </div>
-            <strong>$24.90</strong>
-          </div>
-          <span>X</span>
-        </div>
-        <div className="cart_item  w-full flex  justify-between lg:justify-center gap-x-[100px] items-start md:items-center p-5 ">
-          <div className="flex items-center gap-x-7">
-            <div className="relative w-[100px] h-[100px] bg-red-500/20 rounded-md">
-              <Image fill src={"/p1.png"} alt="" />
-            </div>
-            <div className="flex flex-col items-start">
-              <span>SICILIAN PIZZA</span>
-              <span>Large</span>
-            </div>
-            <strong>$24.90</strong>
-          </div>
-          <span>X</span>
-        </div>
-        <div className="cart_item  w-full flex  justify-between lg:justify-center gap-x-[100px] items-start md:items-center p-5 ">
-          <div className="flex items-center gap-x-7">
-            <div className="relative w-[100px] h-[100px] bg-red-500/20 rounded-md">
-              <Image fill src={"/p1.png"} alt="" />
-            </div>
-            <div className="flex flex-col items-start">
-              <span>SICILIAN PIZZA</span>
-              <span>Large</span>
-            </div>
-            <strong>$24.90</strong>
-          </div>
-          <span>X</span>
-        </div>
-        <div className="cart_item  w-full flex  justify-between lg:justify-center gap-x-[100px] items-start md:items-center p-5 ">
-          <div className="flex items-center gap-x-7">
-            <div className="relative w-[100px] h-[100px] bg-red-500/20 rounded-md">
-              <Image fill src={"/p1.png"} alt="" />
-            </div>
-            <div className="flex flex-col items-start">
-              <span>SICILIAN PIZZA</span>
-              <span>Large</span>
-            </div>
-            <strong>$24.90</strong>
-          </div>
-          <span>X</span>
-        </div>
-        <div className="cart_item  w-full flex  justify-between lg:justify-center gap-x-[100px] items-start md:items-center p-5 ">
-          <div className="flex items-center gap-x-7">
-            <div className="relative w-[100px] h-[100px] bg-red-500/20 rounded-md">
-              <Image fill src={"/p1.png"} alt="" />
-            </div>
-            <div className="flex flex-col items-start">
-              <span>SICILIAN PIZZA</span>
-              <span>Large</span>
-            </div>
-            <strong>$24.90</strong>
-          </div>
-          <span>X</span>
-        </div>
-        <div className="cart_item  w-full flex  justify-between lg:justify-center gap-x-[100px] items-start md:items-center p-5 ">
-          <div className="flex items-center gap-x-7">
-            <div className="relative w-[100px] h-[100px] bg-red-500/20 rounded-md">
-              <Image fill src={"/p1.png"} alt="" />
-            </div>
-            <div className="flex flex-col items-start">
-              <span>SICILIAN PIZZA</span>
-              <span>Large</span>
-            </div>
-            <strong>$24.90</strong>
-          </div>
-          <span>X</span>
-        </div>
-    
       </div>
 
       <div className="total lg:flex-grow-[1] lg:p-[200px] md:flex flex-col md:justify-center flex-1 bg-red-300 w-full py-10 px-5 ">

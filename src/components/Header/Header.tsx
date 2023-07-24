@@ -10,7 +10,7 @@ import Logo from "../ui/Logo/Logo";
 
 const Header = () => {
   return (
-    <header className="flex items-center h-[70px] ">
+    <header className="flex items-center h-[70px] border-b ">
       <div className="container flex justify-between items-center p-[10px]">
         <nav className="hidden md:block">
           <ul className="flex gap-10 uppercase">
@@ -35,6 +35,8 @@ const Header = () => {
         <div className="flex md:hidden">
           <MobileMenu />
         </div>
+        <Link href={"/login"}>Login</Link>
+     
       </div>
     </header>
   );
