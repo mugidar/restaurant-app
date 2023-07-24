@@ -18,6 +18,7 @@ const page = () => {
           ></div>
 
           <div className="
+          pt-20
           flex flex-col flex-1 items-center justify-center text-center  h-full
           p-5
           text-black bg-slate-200
