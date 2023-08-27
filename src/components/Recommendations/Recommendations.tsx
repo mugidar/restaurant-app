@@ -55,16 +55,16 @@ export const getFeatured = async () => {
   return res.json()
 }
 
-const Recommendations = async () => {
+const Recommendations = async () => { 
   const recommendationItems:Product[] = await getFeatured();
-  console.log(recommendationItems)
+ 
   return (
     <div id="test" className="w-screen overflow-x-scroll bg-neutral-950">
       <div className="foods w-full flex lg:flex-row  ">
         {recommendationItems.map((item) => (
           <MainFoodItem
             key={item.title}
-            imgSrc={item.image || "/"}
+            imgSrc={`/${item.image}` || "/"}
             title={item.title}
             price={item.price}
             description={item.description || ""}

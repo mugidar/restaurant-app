@@ -2,8 +2,17 @@
 import React from "react";
 import GoogleIcon from "@mui/icons-material/Google";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import { signIn, useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
-const page = () => {
+const Page = () => {
+  const { status } = useSession();
+  const router = useRouter()
+
+  if(status === "loading") return <h1>Loading...</h1>
+
+  if(status === "authenticated") router.push("/")
+
   return (
     <div className="h-[100vh] p-5">
       <div className="container h-[calc(100vh-150px)]">
@@ -29,9 +38,9 @@ const page = () => {
               Lorem ipsum dolor sit amet.
             </p>
 
-            <div className="border flex items-center gap-x-2  w-[70%] mt-7 border-black/20 p-3">
+            <button onClick={() => signIn("google")} className="border flex items-center gap-x-2  w-[70%] mt-7 border-black/20 p-3">
               <GoogleIcon /> Sign in with Google
-            </div>
+            </button>
             <div className="border  flex items-center gap-x-2 w-[70%] mt-5 border-black/20 p-3">
               <FacebookIcon /> Sign in with Facebook
             </div>
@@ -45,4 +54,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -2,8 +2,9 @@ import CartBtn from "@/components/ui/CartBtn/Button";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { PageProps } from "../../../../../.next/types/app/layout";
+
 import { Product } from "../../../../../types/types";
+import { PageProps } from "../../../../../.next/types/app/page";
 
 
 
@@ -15,7 +16,7 @@ export const getProducts = async (catName: string) => {
 }
 
 
-const page = async({params}:PageProps) => {
+const page = async({params}: PageProps) => {
   const products: Product[] = await getProducts(params.category)
   return (
     <div>
@@ -31,7 +32,7 @@ const page = async({params}:PageProps) => {
                   <Image
                     className="object-contain"
                     alt=""
-                    src={pizza.image || ""}
+                    src={`/${pizza.image}`|| ""}
                     fill
                   />
                 </div>

@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { twMerge } from "tailwind-merge";
 import Footer from "@/components/Footer/Footer";
 import Alert from "@/components/ui/Alert/Alert";
+import AuthProvider from "@/components/AuthProvider/AuthProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -18,7 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+
+
       <body className={twMerge(inter.className)}>
+      <AuthProvider>
         
         <Alert/>
         <Header />
@@ -26,7 +30,10 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+      </AuthProvider>
       </body>
+
     </html>
+
   );
 }
