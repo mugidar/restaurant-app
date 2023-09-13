@@ -60,7 +60,7 @@ const Recommendations = async () => {
  
   return (
     <div id="test" className="w-screen overflow-x-scroll bg-neutral-950">
-      <div className="foods w-full flex lg:flex-row  ">
+      <div className="foods w-full h-screen flex lg:flex-row  ">
         {recommendationItems.map((item) => (
           <MainFoodItem
             key={item.title}
