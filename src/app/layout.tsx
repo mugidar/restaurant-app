@@ -5,6 +5,7 @@ import { twMerge } from "tailwind-merge";
 import Footer from "@/components/Footer/Footer";
 import Alert from "@/components/ui/Alert/Alert";
 import AuthProvider from "@/components/AuthProvider/AuthProvider";
+import { QueryProvider } from "@/components/QueryProvider/QueryProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -19,21 +20,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-
-
       <body className={twMerge(inter.className)}>
-      <AuthProvider>
-        
-        <Alert/>
-        <Header />
-        <main>
-          {children}
-        </main>
-        <Footer />
-      </AuthProvider>
+        <AuthProvider>
+          <QueryProvider>
+            <Alert />
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </QueryProvider>
+        </AuthProvider>
       </body>
-
     </html>
-
   );
 }

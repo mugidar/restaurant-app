@@ -41,9 +41,9 @@ const Page = () => {
             <button onClick={() => signIn("google")} className="border flex items-center gap-x-2  w-[70%] mt-7 border-black/20 p-3">
               <GoogleIcon /> Sign in with Google
             </button>
-            <div className="border  flex items-center gap-x-2 w-[70%] mt-5 border-black/20 p-3">
+            <button onClick={() => signIn("facebook")} className="border  flex items-center gap-x-2 w-[70%] mt-5 border-black/20 p-3">
               <FacebookIcon /> Sign in with Facebook
-            </div>
+            </button>
             <em className="mt-8">
               Have a problem? <u>Contact us</u>
             </em>
