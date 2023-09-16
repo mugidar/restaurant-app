@@ -6,9 +6,11 @@ import { links } from "../../../data";
 import Link from "next/link";
 import Phone from "../ui/Phone/Phone";
 import Cart from "../ui/Cart/Cart";
+import { useSession } from "next-auth/react";
 const MobileMenu = () => {
   const [open, setOpen] = useState(false);
-  const [user, setUser] = useState(false);
+  const {status} = useSession()
+
   useEffect(() => {
     if (open) {
       document.body.style.overflowY = "hidden";
@@ -16,6 +18,8 @@ const MobileMenu = () => {
       document.body.style.overflowY = "scroll";
     }
   }, [open]);
+
+
   return (
     <div>
       <span onClick={() => setOpen(!open)}>
@@ -28,7 +32,7 @@ const MobileMenu = () => {
               <li>{link.title}</li>
             </Link>
           ))}
-          {user ? (
+          {status === "authenticated" ? (
             <Link href={"/orders"} onClick={() => setOpen(!open)}>
               Orders
             </Link>
@@ -37,11 +41,7 @@ const MobileMenu = () => {
               Login
             </Link>
           )}
-          <li>
-            <Link href={"/orders"} onClick={() => setOpen(!open)}>
-              orders
-            </Link>
-          </li>
+         
           <li onClick={() => setOpen(false)}>
             <Cart color="lime" />
           </li>

@@ -1,17 +1,47 @@
-export type Menu = {
+export type MenuType = {
   id: string;
-  slug: string
+  slug: string;
   title: string;
-  description?: string
-  color: string
-  image?: string
+  desc?: string;
+  img?: string;
+  color: string;
+}[];
+
+export type ProductType = {
+  id: string;
+  title: string;
+  desc?: string;
+  img?: string;
+  price: number;
+  options?: { title: string; additionalPrice: number }[];
 };
 
-export type Product = {
+export type OrderType = {
+  id: string;
+  userEmail: string;
+  price: number;
+  products: CartItemType[];
+  status: string;
+  createdAt: Date;
+  intent_id?: String;
+};
+
+export type CartItemType = {
   id: string;
   title: string;
-  description?: string
-  image?: string
-  price: number
-  options?: {title: string; additionalPrice: number}
+  img?: string;
+  price: number;
+  optionTitle?: string;
+  quantity: number;
 };
+
+export type CartType = {
+  products: CartItemType[];
+  totalItems: number;
+  totalPrice: number;
+};
+
+export type ActionTypes = {
+  addToCart:(item:CartItemType)=> void;
+  removeFromCart:(item:CartItemType)=> void;
+}

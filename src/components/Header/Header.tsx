@@ -7,6 +7,7 @@ import MobileMenu from "../MobileMenu/MobileMenu";
 import Cart from "../ui/Cart/Cart";
 import Phone from "../ui/Phone/Phone";
 import Logo from "../ui/Logo/Logo";
+import UserLinks from "../UserLinks/UserLinks";
 
 const Header = () => {
   return (
@@ -25,9 +26,6 @@ const Header = () => {
         <div className="hidden md:flex items-center gap-5">
           <Phone />
           <div>
-            <Link href={"/orders"}>Orders</Link>
-          </div>
-          <div>
             <Cart />
           </div>
         </div>
@@ -35,8 +33,7 @@ const Header = () => {
         <div className="flex md:hidden">
           <MobileMenu />
         </div>
-        <Link href={"/login"}>Login</Link>
-     
+     <UserLinks/>
       </div>
     </header>
   );
