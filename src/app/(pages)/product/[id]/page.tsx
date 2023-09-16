@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 
 export const dynamicParams = true;
 const getProduct = async (id: string) => {
-  const res = await fetch(`http://localhost:3000/api/products/${id}`, {
+  const res = await fetch(`https://restaurant-app.vercel.app/api/products/${id}`, {
     cache: "no-cache"
   });
   if (!res.ok) return new Error("Something went wrong");

@@ -14,7 +14,7 @@ const DeleteButton = ({
   const { data } = useSession();
   const router = useRouter();
   const handleDelete = async (id) => {
-    const res = await fetch(`http://localhost:3000/api/products/${id}`, {
+    const res = await fetch(`https://restaurant-app.vercel.app/api/products/${id}`, {
       method: "DELETE"
     });
     if (res.ok) router.push("/");

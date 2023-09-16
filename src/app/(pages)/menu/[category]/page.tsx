@@ -7,7 +7,7 @@ import { ProductType } from "../../../../../types/types";
 
 
 export const getProducts = async (catName) => {
-  const res = await fetch(`http://localhost:3000/api/products?cat=${catName}`, {cache: "no-store"})
+  const res = await fetch(`https://restaurant-app.vercel.app/api/products?cat=${catName}`, {cache: "no-store"})
   
   if(!res.ok) throw new Error("Failed")
   return res.json()

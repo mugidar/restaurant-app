@@ -30,7 +30,7 @@ const AddPage = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:3000/api/products", {
+      const res = await fetch("https://restaurant-app.vercel.app/api/products", {
         method: "POST",
         body: JSON.stringify({
           ...inputs,

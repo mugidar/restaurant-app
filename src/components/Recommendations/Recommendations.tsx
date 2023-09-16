@@ -49,7 +49,7 @@ import "./Recommendations.scss";
 ]; */
 export const revalidation = 0
 export const getFeatured = async () => {
-  const res = await fetch("http://localhost:3000/api/products", {cache: "no-store"})
+  const res = await fetch("https://restaurant-app.vercel.app/api/products", {cache: "no-store"})
   
   if(!res.ok) throw new Error("Failed")
   return res.json()
