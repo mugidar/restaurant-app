@@ -67,6 +67,7 @@ const Recommendations = async () => {
             imgSrc={`/${item.image}` || "/"}
             title={item.title}
             price={item.price}
+            id={item.id}
             description={item.description || ""}
           />
         ))}
