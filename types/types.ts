@@ -3,7 +3,7 @@ export type MenuType = {
   slug: string;
   title: string;
   desc?: string;
-  img?: string;
+  image?: string;
   color: string;
 }[];
 
@@ -11,7 +11,7 @@ export type ProductType = {
   id: string;
   title: string;
   desc?: string;
-  img?: string;
+  image?: string;
   price: number;
   options?: { title: string; additionalPrice: number }[];
 };
@@ -29,7 +29,7 @@ export type OrderType = {
 export type CartItemType = {
   id: string;
   title: string;
-  img?: string;
+  image?: string;
   price: number;
   optionTitle?: string;
   quantity: number;

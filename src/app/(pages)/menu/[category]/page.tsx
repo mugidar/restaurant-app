@@ -3,12 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-import { Product } from "../../../../../types/types";
-import { PageProps } from "../../../../../.next/types/app/page";
+import { ProductType } from "../../../../../types/types";
 
 
-
-export const getProducts = async (catName: string) => {
+export const getProducts = async (catName) => {
   const res = await fetch(`http://localhost:3000/api/products?cat=${catName}`, {cache: "no-store"})
   
   if(!res.ok) throw new Error("Failed")
@@ -16,8 +14,8 @@ export const getProducts = async (catName: string) => {
 }
 
 
-const page = async({params}: PageProps) => {
-  const products: Product[] = await getProducts(params.category)
+const page = async({params}) => {
+  const products: ProductType[] = await getProducts(params.category)
   return (
     <div>
       <h1>Category!</h1>
