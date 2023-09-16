@@ -9,27 +9,24 @@ const Price = ({ product }) => {
   const [total, setTotal] = useState<string | number>(product.price);
   const { addToCart } = useCartStore();
   useEffect(() => {
-    useCartStore.persist.rehydrate()
-  },[])
+    useCartStore.persist.rehydrate();
+  }, []);
   useEffect(() => {
-
     if (product.options.length > 0) {
       // const option = product.options.filter(
       //   (option) => option.title === currentOption
       // );
       const additionalPrice = product.options[currentOption].additionalPrice;
-      const productPrice = product.price;
 
-      setTotal((additionalPrice + productPrice * quantity).toFixed(2));
-    } else {
-      setTotal((product.price * quantity).toFixed(2));
+      setTotal(additionalPrice + product.price * quantity);
     }
-  }, [quantity, currentOption]);
+    setTotal(product.price * quantity);
+  }, [quantity, currentOption, product]);
 
   const handleAddToCart = (product: Product) => {
     addToCart({
       id: product.id,
-      price: product.price,
+      price: Number(total),
       title: product.title,
       quantity: quantity,
       img: product.image,
